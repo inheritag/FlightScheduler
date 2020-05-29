@@ -1,22 +1,20 @@
-package com.flight.models;
+package com.flight.models.payment;
 
 import java.math.BigDecimal;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.mongodb.core.mapping.Field;
-
-import com.flight.models.payment.PaymentStatus;
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Payment {
+public class PaymentResponse {
 
-  @Field("payment_id")
   String id;
+
+  String bookingId;
 
   String transactionId;
 
